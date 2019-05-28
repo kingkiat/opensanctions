@@ -61,8 +61,7 @@ class CountryMixIn(Base):
     @country.setter
     def country(self, name):
         self.country_name = name
-        self.country_code = countrynames.to_code(name)
-
+        self.country_code = attr.ib(default=None)
 
 @attr.s
 class QualityMixIn(Base):
