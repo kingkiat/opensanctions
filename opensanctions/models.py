@@ -1,5 +1,4 @@
 import logging
-import countrynames
 from pprint import pprint  # noqa
 
 import attr
@@ -61,7 +60,7 @@ class CountryMixIn(Base):
     @country.setter
     def country(self, name):
         self.country_name = name
-        self.country_code = attr.ib(default=None)
+        self.country_code = 'None'
 
 @attr.s
 class QualityMixIn(Base):
